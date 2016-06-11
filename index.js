@@ -13,10 +13,10 @@ app.get("/", function(req, res){
 
 app.get("/api/:city", function(req, res){
   // shodanrequest
-  shodan.search(req, function(){
-    
+  console.log("searching for " + req.params.city);
+  shodan.search(req, function(json){
+    res.json(json);
   });
-  res.send(req.params.city);
 });
 
 app.listen(3000)  // start our app on port 3000
