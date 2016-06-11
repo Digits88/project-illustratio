@@ -1,4 +1,5 @@
-var stadtName = document.querySelector("#stadtname");
+var stadt = document.querySelector("#stadtname");
+var searchButton = document.querySelector("#search")
 var count = document.querySelector("#count");
 
 var updateValue = function(json){
@@ -6,9 +7,9 @@ var updateValue = function(json){
 }
 
 // make a listener to the keyup event
-stadtName.addEventListener("input", function(event){
+searchButton.addEventListener("click", function(event){
   if(event.target.value != ""){
-    ajax().get("api/"+event.target.value)
+    ajax().get("api/"+stadt.value)
       .then(updateValue)
       .catch(function(err){
         console.log(err);
