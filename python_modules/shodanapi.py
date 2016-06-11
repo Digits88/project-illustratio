@@ -6,7 +6,7 @@ from sys import argv
 import aiohttp
 import asyncio
 
-city = "New York" #argv[1]
+city = argv[1]
 query = "city:'{}'".format(city)
 apiKey = "lBHY1f9tprscJ6L8EFCtbxhhga7z3Mxj"
 

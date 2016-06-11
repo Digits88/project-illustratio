@@ -3,18 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Projekt Illustratio</title>
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,900italic|Open+Sans+Condensed:300|Fjalla+One' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="app/stylesheet.css">
+	  <link rel="stylesheet" href="app/stylesheet.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </head>
   <body>
     <h1>Projekt Illustratio</h1> <br>
     <svg id="visualisation" width="1000" height="500"></svg>
 
 
-    <h3>Dein Stadtname: </h3>
-
-    <input id="stadtname"></input><button id="search">Suche</button> <br>
-    <p>Anzahl der potentiell gefährdeten Server der Stadt: <span id="count"></span></p>
+    <h2>Dein Stadtname: </h2>
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" id="search">Los</button>
+      </span>
+      <input type="text" class="form-control" placeholder="Stadtname" id="stadtname">
+    </div>
+    <h3>Anzahl der potentiell gefährdeten Server der Stadt: <span id="count"></span></h3>
 
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="app/js/chart.js"></script>
