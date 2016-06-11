@@ -5,11 +5,14 @@ shodan.settings = {
 }
 var app = express();
 
+app.use("/app", express.static("app"));
+
+app.get("/", function(req, res){
+  res.sendFile(__dirname + "/app/index.html");
+});
+
 app.get("/api", function(req, res){
-  shodan.search(req, function(apiResponse){ // search through shodan's api
-    console.log(apiResponse);
-    res.send(apiResponse);   // after the request send it back to the client
-  });
+  console.log("Got the city name: " + req.city);
 });
 
 app.listen(3000)  // start our app on port 3000
