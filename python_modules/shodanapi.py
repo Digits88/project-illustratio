@@ -6,8 +6,8 @@ from sys import argv
 import aiohttp
 import asyncio
 
-city = argv[1]
-query = "city:{} country:DE".format(city)
+city = "New York" #argv[1]
+query = "city:'{}'".format(city)
 apiKey = "lBHY1f9tprscJ6L8EFCtbxhhga7z3Mxj"
 
 countUrl = "https://api.shodan.io/shodan/host/count?key={}&query={}".format(apiKey, query)
