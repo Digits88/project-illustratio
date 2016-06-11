@@ -6,7 +6,7 @@ from sys import argv
 import aiohttp
 import asyncio
 
-city = "Ulm" #argv[2]
+city = argv[1]
 query = "city:{} country:DE".format(city)
 apiKey = "lBHY1f9tprscJ6L8EFCtbxhhga7z3Mxj"
 
@@ -29,4 +29,3 @@ async def main():
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
-

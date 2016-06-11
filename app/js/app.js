@@ -3,11 +3,7 @@ var searchButton = document.querySelector("#search")
 var count = document.querySelector("#count");
 
 var updateValue = function(json){
-  var filtered = json.results.filter(function(result){
-    return result.location == stadt.value;
-  });
-  console.log(filtered);
-  count.innerHTML = json.count;
+  count.innerHTML = json.total;
 }
 
 // make a listener to the keyup event
