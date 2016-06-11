@@ -4,34 +4,34 @@ function InitChart() {
 
   var barData = [{
     'x': "Berlin",
-    'y': 609685
+    'y': 0.0001*609685
   }, {
     'x': "Hamburg",
-    'y': 296689
+    'y': 0.0001*296689
   }, {
     'x': "München",
-    'y': 281409
+    'y': 0.0001*281409
   }, {
     'x': "Köln",
-    'y': 984
+    'y': 0.0001*984
   }, {
     'x': "Frankfurt am Main",
-    'y': 494434
+    'y': 0.0001*494434
   }, {
     'x': "Stuttgart",
-    'y': 108117
-  }, {
-    'x': "Düsseldorf",
-    'y': 40
+    'y': 0.0001*108117
   }, {
     'x': "Dortmund",
-    'y': 30
+    'y': 0.0001*96401
   }, {
     'x': "Essen",
-    'y': 21
+    'y': 0.0001*84615
   }, {
     'x': "Bremen",
-    'y': 154
+    'y': 0.0001*75486
+  }, {
+    'x': "Leipzig",
+    'y': 0.0001*92152
   }];
 
   var vis = d3.select('#visualisation'),
@@ -41,7 +41,7 @@ function InitChart() {
       top: 20,
       right: 20,
       bottom: 20,
-      left: 50
+      left: 100
     },
     xRange = d3.scale.ordinal().rangeRoundBands([MARGINS.left, WIDTH - MARGINS.right], 0.1).domain(barData.map(function (d) {
       return d.x;
@@ -71,11 +71,6 @@ function InitChart() {
     .attr('transform', 'translate(0,' + (HEIGHT - MARGINS.bottom) + ')')
     .call(xAxis);
 
-  vis.append('svg:g')
-    .attr('class', 'y axis')
-    .attr('transform', 'translate(' + (MARGINS.left) + ',0)')
-    .call(yAxis);
-
   vis.selectAll('rect')
     .data(barData)
     .enter()
@@ -91,9 +86,4 @@ function InitChart() {
       return ((HEIGHT - MARGINS.bottom) - yRange(d.y));
     })
     .attr('fill', 'grey')
-    .on('mouseout',function(d){
-      d3.select(this)
-        .attr('fill','grey');
-    });
-
 }

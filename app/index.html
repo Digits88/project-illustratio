@@ -2,27 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Projekt Illustratio</title>
-	  <link rel="stylesheet" href="app/stylesheet.css">
+    <title>Illustratio</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="app/stylesheet.css">
   </head>
   <body>
-    <h1>Projekt Illustratio</h1> <br>
-    <svg id="visualisation" width="1000" height="500"></svg>
+    <div class="container-fluid">
+      <div class="page-header">
+        <h1>Illustratio</h1>
+      </div>
 
+      <svg id="visualisation" width="1000" height="500"></svg>
 
-    <h2>Dein Stadtname: </h2>
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button" id="search">Los</button>
-      </span>
-      <input type="text" class="form-control" placeholder="Stadtname" id="stadtname">
+      <h2>Und jetzt DEINE Stadt! </h2> <br>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Beispielstadt" aria-describedby="sizing-addon1" id="stadtname">
+      </div>
+      <input class="btn btn-default" type="submit" value="Submit" id="search">
+
+      <h3>Anzahl der potentiell gefährdeten Server deiner Stadt: <span id="count"></span></h3>
     </div>
-    <h3>Anzahl der potentiell gefährdeten Server der Stadt: <span id="count"></span></h3>
-
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="app/js/chart.js"></script>
     <script src="app/js/app.js"></script>

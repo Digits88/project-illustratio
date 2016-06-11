@@ -1,26 +1,22 @@
-.axis path, .axis line
-{
-		fill: none;
-		stroke: #777;
-		shape-rendering: crispEdges;
+.axis path, .axis line {
+	fill: none;
+	stroke: #777;
+	shape-rendering: crispEdges;
 }
 
-.axis text
-{
-		font-family: 'Arial';
-		font-size: 13px;
+.axis text {
+	font-family: 'Arial';
+	font-size: 13px;
 }
-.tick
-{
-		stroke-dasharray: 1, 2;
+.tick {
+	stroke-dasharray: 1, 2;
 }
-.bar
-{
-		fill: FireBrick;
+.bar {
+	fill: FireBrick;
 }
-
-
-h1 {
-	background-color: "light-grey";
-	color: "white";
+.page-header {
+	text-align: center;
+}
+.input-group {
+	width: 300px;
 }
