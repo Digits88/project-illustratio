@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Illustratio</title>
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="app/favicon.ico" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="app/stylesheet.css">
@@ -11,21 +11,21 @@
   <body>
     <div class="container-fluid">
       <div class="page-header">
-        <h1>Illustratio <img src="logo.png" alt="Missing File!" height=40 width=40></h1>
+        <h1>Illustratio <img src="app/logo.png" alt="Missing File!" height=40 width=40></h1>
       </div>
 
-      <svg id="visualisation" width="1000" height="500"></svg>
+      <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
       <h2>Und jetzt DEINE Stadt! </h2> <br>
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon" id="sizing-addon1">@</span>
-        <input type="text" class="form-control" placeholder="Beispielstadt" aria-describedby="sizing-addon1" id="stadtname">
-        <input class="btn btn-default" type="submit" value="Submit" id="search">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Beispielstadt" id="stadtname">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" id="search">Go!</button>
+        </span>
       </div>
-
       <h3>Anzahl der potentiell gefährdeten Server deiner Stadt: <span id="count"></span></h3>
     </div>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="app/js/chart.js"></script>
     <script src="app/js/app.js"></script>
     <script src="app/js/ajax.min.js"></script>

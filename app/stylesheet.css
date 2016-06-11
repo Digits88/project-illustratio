@@ -18,5 +18,9 @@
 	text-align: center;
 }
 .input-group {
-	width: 300px;
+	width: 200px;
+}
+
+#count {
+	color: red;
 }
