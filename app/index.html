@@ -8,11 +8,16 @@
   </head>
   <body>
     <h1>Projekt Illustratio</h1> <br>
+    <svg id="visualisation" width="1000" height="500"></svg>
+
+
     <h3>Dein Stadtname: </h3>
 
-    <input id="stadtname"></input><button id="search"></button> <br>
+    <input id="stadtname"></input><button id="search">Suche</button> <br>
     <p>Anzahl der potentiell gefährdeten Server der Stadt: <span id="count"></span></p>
 
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="app/js/chart.js"></script>
     <script src="app/js/app.js"></script>
     <script src="app/js/ajax.min.js"></script>
   </body>

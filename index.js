@@ -12,8 +12,8 @@ app.get("/", function(req, res){
 });
 
 app.get("/api/:city", function(req, res){
-  // shodanrequest
-  console.log("searching for " + req.params.city);
+  // request to the shodan site
+  console.log("**SERVER NOTE** Searching for " + req.params.city);
   shodan.search(req, function(json){
     res.json(json);
   });
