@@ -11,8 +11,12 @@ app.get("/", function(req, res){
   res.sendFile(__dirname + "/app/index.html");
 });
 
-app.get("/api", function(req, res){
-  console.log("Got the city name: " + req.city);
+app.get("/api/:city", function(req, res){
+  // shodanrequest
+  shodan.search(req, function(){
+    
+  });
+  res.send(req.params.city);
 });
 
 app.listen(3000)  // start our app on port 3000
