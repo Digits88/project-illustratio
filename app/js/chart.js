@@ -2,7 +2,7 @@
   	var chart = new CanvasJS.Chart("chartContainer", {
   		theme: "theme1",//theme1
   		title:{
-  			text: "Die größten Städte Deutschlands von links nach rechts mit Anzahl von potenziell Angreifbaren Servern"
+  			text: "Die größten Städte Deutschlands von links nach rechts mit Anzahl von potenziell angreifbaren Servern"
   		},
   		animationEnabled: false,   // change to true
   		data: [
