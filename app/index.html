@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+	<!-- Adding a Favicon to the Tab Bar -->
     <title>Illustratio</title>
 	<link rel="shortcut icon" type="image/x-icon" href="app/favicon.ico" />
     <!-- Latest compiled and minified CSS -->
@@ -9,13 +10,15 @@
     <link rel="stylesheet" href="app/stylesheet.css">
   </head>
   <body>
+
     <div class="container-fluid">
       <div class="page-header">
-        <h1>Illustratio <img src="app/logo.png" alt="Missing File!" height=40 width=40></h1>
+        <h1>Illustratio <img src="app/logo.png" height=40 width=40></h1>
       </div>
 
       <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
+	  <!-- Linking Input with Script -->
       <h2>Und jetzt DEINE Stadt! </h2> <br>
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Beispielstadt" id="stadtname">
@@ -25,6 +28,7 @@
       </div>
       <h3>Anzahl der potentiell gefährdeten Server deiner Stadt: <span id="count"></span></h3>
     </div>
+	
     <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="app/js/chart.js"></script>
     <script src="app/js/app.js"></script>
